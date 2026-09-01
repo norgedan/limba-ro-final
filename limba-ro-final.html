@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Limba care nu vrea să moară — Originile, supraviețuirea și mitul latin</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #09090f;
+      color: #ccc8be;
+      line-height: 1.95;
+      padding-bottom: 120px;
+    }
+
+    .hero {
+      background: linear-gradient(170deg, #0e0e1c 0%, #09090f 100%);
+      border-bottom: 1px solid #181828;
+      padding: 80px 32px 64px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #3a6a9a;
+      margin-bottom: 22px;
+      font-family: 'Courier New', monospace;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: #e8e4dc;
+      letter-spacing: -1.5px;
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: #b03030;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #6a7a8a;
+      font-style: italic;
+      max-width: 580px;
+      margin: 0 auto 24px;
+      line-height: 1.7;
+    }
+
+    .hero-nota {
+      font-size: 0.82rem;
+      color: #2a4a6a;
+      margin-top: 30px;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.4px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.75;
+      border-top: 1px solid #181828;
+      padding-top: 22px;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .capitol {
+      padding: 62px 0 44px;
+      border-bottom: 1px solid #111118;
+    }
+
+    .capitol:last-of-type { border-bottom: none; }
+
+    .capitol-nr {
+      font-size: 9px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #2a4a7a;
+      margin-bottom: 12px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .capitol h2 {
+      font-size: clamp(1.3rem, 3vw, 1.85rem);
+      font-weight: 700;
+      color: #e8e4dc;
+      margin-bottom: 32px;
+      line-height: 1.22;
+      letter-spacing: -0.3px;
+    }
+
+    .capitol p {
+      font-size: 1.05rem;
+      color: #b8b3aa;
+      margin-bottom: 22px;
+      max-width: 72ch;
+    }
+
+    .capitol p strong {
+      color: #ddd8d0;
+      font-weight: 600;
+    }
+
+    .capitol p em {
+      color: #c8c4bc;
+    }
+
+    .citat {
+      border-left: 3px solid #1a5a9a;
+      margin: 32px 0;
+      padding: 20px 26px;
+      background: #0c0c18;
+      border-radius: 0 6px 6px 0;
+      font-size: 1.06rem;
+      color: #8aaabf;
+      font-style: italic;
+      line-height: 1.9;
+    }
+
+    .ovidiu {
+      border-left: 3px solid #6a2a8a;
+      margin: 32px 0;
+      padding: 20px 26px;
+      background: #0e0a12;
+      border-radius: 0 6px 6px 0;
+      font-size: 1.06rem;
+      color: #aa80cc;
+      font-style: italic;
+      line-height: 1.9;
+    }
+
+    .concluzie {
+      border-left: 3px solid #7a5a1a;
+      margin: 32px 0;
+      padding: 20px 26px;
+      background: #110e06;
+      border-radius: 0 6px 6px 0;
+      font-size: 1.02rem;
+      color: #c8a050;
+      line-height: 1.9;
+    }
+
+    .atentie {
+      border-left: 3px solid #8a3a1a;
+      margin: 32px 0;
+      padding: 20px 26px;
+      background: #120a06;
+      border-radius: 0 6px 6px 0;
+      font-size: 1.02rem;
+      color: #c07050;
+      line-height: 1.9;
+    }
+
+    .nota {
+      border-left: 3px solid #1a4a3a;
+      margin: 32px 0;
+      padding: 20px 26px;
+      background: #080e0c;
+      border-radius: 0 6px 6px 0;
+      font-size: 1.02rem;
+      color: #60aa80;
+      line-height: 1.9;
+    }
+
+    .audio-bar {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid #111118;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-asculta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #122040;
+      color: #6aaadd;
+      border: 1px solid #1a3a6a;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      transition: background 0.2s;
+      letter-spacing: 0.5px;
+    }
+    .btn-asculta:hover { background: #1a2a50; }
+
+    .btn-stop {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: #2a4a6a;
+      border: 1px solid #151525;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      transition: background 0.2s;
+    }
+    .btn-stop:hover { background: #0d0d18; color: #5a8aaa; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">// o conversație despre limbă, oameni și mituri</div>
+  <h1>Limba care<br>nu vrea să <em>moară</em></h1>
+  <p class="hero-sub">Originile reale ale limbii române, mitul latinizării și un popor care exista cu milenii înainte ca Roma să construiască primul pod peste Dunăre</p>
+  <p class="hero-nota">Acest document s-a născut dintr-o conversație liberă între un om și o inteligență artificială. Nu este o lucrare academică. Nu este propagandă. Este un dialog care pune întrebările corecte, urmărește dovezile acolo unde duc și spune răspicat ce se știe, ce nu se știe și de ce. Toate afirmațiile sunt verificabile. Curiozitatea este singurul instrument necesar pentru a le urmări.</p>
+</div>
+
+<div class="page">
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 01</div>
+    <h2>Un popor vechi de milenii și o limbă pe care nu i-a dat-o nimeni</h2>
+    <div id="text-1">
+      <p>Există o poveste pe care o știe toată lumea despre originile limbii române. Romanii au venit în 106 după Hristos, au cucerit Dacia, s-au amestecat cu dacii și a ieșit poporul român vorbitor de latină. Simplu, ordonat, convenabil. Singura problemă cu această poveste este că nu corespunde cu ceea ce arată dovezile reale — nici demografic, nici lingvistic, nici logic.</p>
+
+      <p>Această conversație nu propune o altă poveste la fel de simplă. Propune ceva mai dificil și mai interesant: să urmărim datele acolo unde duc, să separăm ce se știe de ce se presupune și să lăsăm tabloul să fie atât de complex pe cât este în realitate. Ceea ce iese la capăt nu este un mit înlocuit cu altul — este o înțelegere mai adâncă a unui spațiu geografic, a unor oameni și a unei limbi care a supraviețuit totul.</p>
+
+      <p>Punctul de plecare corect nu este Roma. Este Carpaților. Regiunea carpatică-dunăreană era locuită de indo-europeni cu cel puțin două milenii înainte de Hristos. Tracii se individualizaseră ca civilizație până în jurul anului 750 î.Hr. Geții — numiți astfel de greci, sau daci, cum îi numeau romanii — apăreau documentați în izvoare scrise cel puțin din sec. VI î.Hr. Herodot îi menționa în urmă cu 2500 de ani, descriindu-i ca pe cei mai viteji și mai drepți dintre traci. Regatul dacic unificat sub Burebista funcționa ca o mare putere regională cu un secol înainte ca primul soldat roman să treacă Dunărea în misiune de cucerire.</p>
+
+      <p>Cucerirea a venit în 106 după Hristos. A durat 165 de ani — romanii s-au retras oficial în 271. Dacă cineva ar fi spus unui observator din acea vreme că în 165 de ani o civilizație de secole și-ar abandona de bunăvoie limba și ar adopta-o pe a cuceritorului, observatorul ar fi râs. Și ar fi avut dreptate să râdă.</p>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-1','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 02</div>
+    <h2>Geții și dacii — același popor, două nume, o civilizație subestimată</h2>
+    <div id="text-2">
+      <p>Geții și dacii nu erau două popoare diferite. Erau același popor văzut din unghiuri diferite. Geograful grec Strabo scria că dacii și geții vorbeau aceeași limbă. Cassius Dio nota că geții sunt același popor cu dacii, iar geți era pur și simplu numele grecesc pentru daci. Vergiliu, Horațiu și alți poeți romani îi numeau când geți, când daci, fără distincție. Romanii îi numeau daci pe cei din vest, spre munți și spre Germania. Grecii îi numeau geți pe cei din est, spre Marea Neagră. Era același om privit dinspre orașe diferite.</p>
+
+      <p>Această civilizație era departe de imaginea poporului primitiv care primea cultura de la cuceritori. Societatea geto-dacică era stratificată și organizată: aristocrația — tarabostes, cei cu pălărie — purta simboluri distincte ale statutului, iar clasa preoțească deținea o putere care rivaliza cu cea a regilor. Incinta sacră de la Sarmizegetusa includea un sanctuar circular din piatră și un disc solar din andezit ale cărui aliniamente astronomice calculau calendarul. Meșteșugul aurăriei era practicat în Munții Apuseni de cel puțin 6000 de ani. Tezaurele dacice păstrate azi în muzee din România și din lume — printre care Casca de la Coțofenești, din aur masiv, cu 2400 de ani vechime — sunt opere de rafinament tehnic și artistic de cel mai înalt nivel.</p>
+
+      <p>Religia geto-dacică era centrată pe Zalmoxis — o divinitate sau un reformator divinizat care promitea nemurirea sufletului. Istoricii antici notau că setul de idei atribuite lui Zalmoxis prezenta asemănări cu pitagoreismul, una dintre cele mai sofisticate filozofii ale lumii antice. Dacii nu se temeau de moarte, pentru că credeau în continuarea vieții. Romanii înșiși notau că dacii mergeau la luptă ca la o sărbătoare. Un popor cu o filozofie a nemuririi nu este un popor al barbarilor.</p>
+
+      <p>Când romanii au cucerit Dacia, au dus la Roma o pradă care a salvat literal Imperiul Roman dintr-o criză financiară: aproximativ 165 de tone de aur și 330 de tone de argint — posibil cea mai mare pradă unică din istoria antică. Cu banii aceia, Traian a construit un forum întreg la Roma, a acordat scutiri de taxe tuturor cetățenilor romani și a plătit 120 de zile de jocuri gladiatoriale. Forumul lui Traian era decorat cu zeci de statui ale unor războinici daci cu barbă, sculptați în marmură colorată, în mărime naturală — o armată de piatră în inima Romei. Romanii ridicau statui popoarelor pe care le respectau. Dacii erau, în ochii lor, adversari demni de victoria lor.</p>
+
+      <div class="concluzie">Scopul cuceririi Daciei a fost clar: aurul, argintul și minele. Nu schimbarea limbii și nu construcția unui nou popor. Asta are consecințe directe pentru modul în care înțelegem ce s-a întâmplat după.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-2','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 03</div>
+    <h2>Legiunile nu vorbeau latină — mitul cuceritorului roman</h2>
+    <div id="text-3">
+      <p>Există o imagine fixă în mintea multora: soldații romani care vin în Dacia și vorbesc latina lui Cicero, pe care dacii o adoptă treptat. Această imagine este în întregime fictivă. Armata romană din Dacia nu era formată din italici vorbitori de latină maternă. Era o armată cosmopolită — recruți din Gallia, din Siria, din Pannonia, din Moesia, din Britania, din triburi germanice. Latina era limba de comandă, nu limba casei. Pe măsura trecerii timpului, regimentele ajungeau să fie dotate în principal cu recruți locali, din provincia unde erau staționare. Un regiment cu nume pompos latin, format în Dacia, era probabil format în bună parte din daci.</p>
+
+      <p>Traian a recrutat bărbați daci direct în armata romană ca auxiliari — soldați non-cetățeni — și i-a trimis să apere Britania. O parte din cei care au construit și apărat Zidul lui Hadrian erau daci. Asta înseamnă că același om putea fi, în funcție de împrejurări, dac liber, soldat roman auxiliar sau prizonier de război. Identitatea era mai fluidă decât o sugerează narativul naționalismului modern.</p>
+
+      <p>Mai important: romanii nu au cucerit întreaga Dacie. Au ocupat o parte din Transilvania, cu accesul la minele de aur din Munții Apuseni, și un coridor prin Oltenia. Crișana, Maramureșul și cea mai mare parte a Moldovei au rămas sub Dacii Liberi pe toată durata provinciei — adică pe toată durata celor 165 de ani. Pe jumătate din spațiul geto-dacic, niciun soldat roman nu a dat ordine și nicio administrație romană nu a funcționat.</p>
+
+      <p>Romanii, în general, nu cereau popoarelor cucerite să renunțe la limbile lor. Egiptienii au vorbit egipteana sute de ani sub dominație romană. Grecii continuau să vorbească greaca — greaca era a doua limbă oficială a Imperiului. Evreii vorbeau aramaica. Galii au vorbit gaulica secole după cucerire, înainte ca ea să dispară gradual. De ce dacii ar fi excepția? De ce ar fi renunțat de bunăvoie la propria limbă, mai ales că romanii nici nu au cerut asta?</p>
+
+      <div class="concluzie">165 de ani de colonizare parțială, cu trupe cosmopolite, fără politici de schimbare lingvistică, pe un teritoriu parțial ocupat — aceasta este baza reală a „latinizării" Daciei. Comparați cu 600 de ani de romanizare a Galliei sau 500 de ani a Hispaniei. Că ar fi produs un rezultat complet este o afirmație care nu rezistă la examinare.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-3','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 04</div>
+    <h2>Dacica și latina — verișoare, nu limbi opuse</h2>
+    <div id="text-4">
+      <p>Dacă nu a existat o latinizare bruscă prin forță sau prin politică deliberată, trebuie să existe o altă explicație pentru de ce limba română are atâta latină în ea. Și există — dar ea implică să înțelegem ceva esențial despre relația dintre dacică și latină, ceva pe care narativul oficial îl ignoră complet.</p>
+
+      <p>Familia limbilor indo-europene se împarte după un criteriu fonologic fundamental: cum au tratat consoanele velare din Proto-Indo-Europeana veche. Limbile din grupul centum — latina, greaca, celtica, germanica — păstrează velara ca K. Limbile din grupul satem — sanscrita, slavele, baticele, iraniana — o transformă în S sau Ș. Cuvântul pentru o sută: latină centum cu K; sanscrită śatam cu Ș. Aceasta nu e o detaliu minor — e o bifurcație fundamentală în evoluția limbilor indo-europene, produsă cu mii de ani înainte de Hristos.</p>
+
+      <p>Opinia academică din sec. XIX plasa dacica în grupul satem — mai apropiată de slavă decât de latină. Cercetarea mai recentă, pe baza singurului corpus real de cuvinte dacice pe care îl avem — câteva sute de nume de plante înregistrate de medicul grec Dioscoride în sec. I d.Hr. — contestă frontal această clasificare. Cuvântul dacic pentru câine conținea velara K, nu o siflantă. În sanscrită, câinele este śvan — velara s-a transformat în Ș. Dacica o păstrează ca K, exact ca latina canis. Cuvântul dacic pentru orb conținea aceeași velară, înrudit cu latinescul caecus. Aceste corespondențe apar sistematic în tot corpusul disponibil, nu izolat.</p>
+
+      <p>Concluzia pe care o susțin aceste date este că dacica era o limbă centum — din aceeași mare ramură indo-europeană ca latina, nu din ramura opusă. Nu era un dialect al latinei. Erau limbi distincte. Dar erau verișoare, nu străine. Diferența dintre ele era cu totul alta decât diferența dintre latină și, să spunem, sumeriană sau chineză.</p>
+
+      <p>Aceasta schimbă totul în privința procesului de contact lingvistic. Când un italian și un spaniol conversează azi, fiecare în propria limbă, ei se înțeleg parțial. Nu au nevoie de profesor și nu au nevoie de forță. Pe generații, în comunități mixte, vorbitorul mai tânăr adoptă forma mai prestigioasă — nu pentru că i s-a interzis propria limbă, ci pentru că forma de prestigiu deschide mai multe uși. Aceasta nu este latinizare — este convergență naturală între sisteme înrudite.</p>
+
+      <div class="concluzie">Dacica și latina vulgară militară aparțineau aceluiași grup centum al familiei indo-europene. Procesul care a produs româna nu a fost cucerire lingvistică — a fost mai degrabă convergența graduală, pe câteva generații, a două limbi înrudite, în care una a câștigat statutul de limbă publică și de scriere, fără să o distrugă complet pe cealaltă.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-4','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 05</div>
+    <h2>Ovidiu la Tomis — cel mai important martor antic al limbii getice</h2>
+    <div id="text-5">
+      <p>Există un document unic în istoria antică — un document scris de un roman educat care a trăit nouă ani printre geți, a învățat limba lor și a lăsat mărturie directă despre ce a simțit în contact cu ea. Este Publius Ovidius Naso — cel mai mare poet roman al epocii augustane, autorul Metamorfozelor și al Artei de a iubi. Augustus l-a exilat în 8 d.Hr. la Tomis, actualul Constanța. Ovidiu a murit acolo în 17 d.Hr., fără să mai vadă Roma.</p>
+
+      <p>La sosire, Ovidiu nu înțelegea nimic. Se făcea înțeles prin gesturi. Nimeni din Tomis nu vorbea latina. El nota asta cu un fel de groază — un poet latin de rafinament extrem, aruncat într-un loc unde nimeni nu îi putea aprecia versurile. A luat-o de la zero.</p>
+
+      <p>Ce s-a întâmplat în cei nouă ani care au urmat este extraordinar. Ovidiu a învățat getica și sarmatica — cele două limbi principale ale regiunii. Le-a învățat atât de bine încât a compus un volum întreg de poezie în getică, cu care și-a câștigat reputație de poet printre localnici. În propriile scrisori trimise Romei, el scria:</p>
+
+      <div class="ovidiu">„Eu însumi, poet roman, sunt forțat să vorbesc adesea în modul sarmatic. Și mi-e rușine să admit că, printr-o lungă neutilizare, cuvintele latine abia îmi mai vin în minte. Nu mă îndoiesc că și în această scrisoare nu puține cuvinte barbare s-au strecurat. Vina nu este a omului — este a locului. Dar, ca să nu îmi pierd cu totul folosința limbii latine, vorbesc cu mine însumi și repet cuvintele pe care le-am uitat."
+      <br><br>— Tristia V.7.55; III.14.47</div>
+
+      <div class="ovidiu">„Și, oh!, mi-e rușine, dar am scris o poezie în limba getică, și am construit în metrul nostru cuvintele barbare. Și nici tu nu ar trebui să te miri dacă găsești erori în poeziile pe care le compun — ele sunt aproape opera unui poet getic."
+      <br><br>— Pont. IV.13</div>
+
+      <p>Gândiți-vă la ceea ce spune asta. Ovidiu nu a uitat latina din cauza bătrâneții sau a bolii. A uitat-o pentru că getica i-a luat locul în minte — în nouă ani de imersiune totală, getica a devenit limba în care gândea. Cuvinte getice se strecurau involuntar în propriile lui poeme latine, fără ca el să le observe în momentul scrierii. O sursă antică notează că limba geților era, în percepția lui Ovidiu, o limbă barbară — dar o limbă barbară latină.</p>
+
+      <p>Un alt detaliu extraordinar: o delegație dacică a vorbit cândva în fața Senatului roman în propria limbă. Senatorii care ocupaseră funcții în provinciile dunărene o înțelegeau. Senatul a considerat obligatorii promisiunile făcute în acea limbă — ceea ce, din perspectivă juridică, implică înțelegere.</p>
+
+      <p>Ce demonstrează experiența lui Ovidiu? Că getica era suficient de diferită de latină pentru ca un latin nativ să nu o înțeleagă la sosire. Nu era un dialect latin. Dar era suficient de accesibilă structural pentru ca un om inteligent să o poată învăța funcțional în câțiva ani și să compună poezie în ea. Un italian care încearcă finlandeza nu scrie poezie finlandeză în șase ani. Unul care încearcă portugheza — da. Experiența lui Ovidiu sugerează că getica era undeva în acea zonă de accesibilitate pe care o au limbile înrudite între ele.</p>
+
+      <div class="concluzie">Ovidiu este martorul cel mai direct pe care îl avem pentru relația dintre latină și getică. El a trăit-o. A scris despre ea. Ce ne spune este că cele două limbi nu erau nici identice, nici complet opace una față de cealaltă. Erau limbi separate, dar permeabile.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-5','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 06</div>
+    <h2>Sunetele pe care latina nu le-a avut niciodată — ă, î, ș, ț</h2>
+    <div id="text-6">
+      <p>Dacă vreți un argument simplu și verificabil că limba română nu este latină curată, iată-l: patru dintre sunetele fundamentale ale românei nu au existat niciodată în latina clasică. Niciodată. Nu ca sunete marginale sau rare — ca absențe complete din inventarul fonologic latin.</p>
+
+      <p>Sunetul ă — vocala centrală pe care o aud toți străinii ca cea mai caracteristică trăsătură a românei — nu există în nicio altă limbă romanică. Nici în franceză, nici în italiană, nici în spaniolă, nici în portugheză. Când un italian sau un francez încearcă să pronunțe cuvântul casă sau masă, produce un sunet diferit, pentru că ă pur și simplu nu există în aparatul fonetic pe care l-a construit vorbind propria limbă. La fel și î — vocala din cuvintele câmp, înalt, român — complet absentă din toate limbile romanice occidentale.</p>
+
+      <p>Sunetul ș — cum îl auzim în șarpe, șapte, școală — nu exista în latina clasică. Latina clasică nu avusese niciodată fonema pe care lingviștii o notează ca ʃ. Limbile romanice occidentale au trebuit să inventeze fiecare propriile convenții grafice pentru a-l nota: franceza cu ch, engleza cu sh, italiana cu sc sau ci. Română l-a primit — dar nu din latină. Din substrat.</p>
+
+      <p>Sunetul ț — din țară, față, noapte, noaptea — nici acesta nu exista ca fonem distinct în latina clasică. Este o africată, un sunet complex, complet absent din fonologia latină originară.</p>
+
+      <p>Literele ș și ț au primit formă grafică standardizată abia în sec. XIX, odată cu trecerea de la scrierea chirilică la cea latină. Petru Maior le-a propus formal în 1819. Dar sunetele pe care le notează existau în vorbirea populară de secole sau de milenii — fix pentru că nu veneau din latină, ci dintr-un strat fonologic mult mai vechi al spațiului carpato-balcanic.</p>
+
+      <p>De unde vin aceste sunete? Albaneza — singura limbă modernă care ar putea moșteni direct din fondul traco-dacic — le are pe toate. Bulgara le are. Macedoneana le are. Toate limbile din Sprachbund-ul balcanic — uniunea lingvistică a Balcanilor, formată din limbi de familii complet diferite care au converges structural de-a lungul mileniilor — le au. Singurul numitor comun al acestui spațiu geografic este substratul pre-roman, adică fondul traco-geto-dacic.</p>
+
+      <div class="concluzie">Ș și Ț nu sunt în latina clasică. Ă și Î nu sunt în latina clasică. Aceste patru sunete sunt amprenta fonologică a spațiului carpato-balcanic, prezentă în română pentru că oamenii care au vorbit în acel spațiu cu mii de ani înainte de Roma și-au lăsat marca ireversibilă în sunetele limbii.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-6','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 07</div>
+    <h2>Structura profundă a românei — ce vin din spațiu, nu din Roma</h2>
+    <div id="text-7">
+      <p>Dincolo de sunete, există structuri gramaticale ale românei care nu se explică prin latină și care o fac unică în familia romanică — dar o leagă profund de spațiul balcanic.</p>
+
+      <p>Articolul hotărât stă la sfârșitul cuvântului în română: nu omul, ci omul. Nu codrul, ci codrul. Aceasta se numește articol enclitic. Niciuna din marile limbi romanice occidentale nu funcționează astfel — franceza, spaniola, italiana, portugheza pun articolul înaintea substantivului. Articolul enclitic nu este o moștenire latină — este o inovație proprie spațiului balcanic. Bulgara îl are. Albaneza îl are. Macedoneana îl are. Limbile din familii complet diferite care au trăit în același spațiu geografic de milenii au converges spre această structură. Substratul comun le-a modelat pe toate.</p>
+
+      <p>Genul neutru — pierdut de toate limbile romanice occidentale — a supraviețuit în română. Un substantiv neutru este masculin la singular și feminin la plural: un scaun, două scaune. Latina clasică îl avusese. Franceza, italiana, spaniola l-au abandonat. Română l-a păstrat — dar în forma sa specifică românei, diferită de cea latină, modelată de un spațiu care funcționa după alte reguli.</p>
+
+      <p>Sistemul cazual — relațiile gramaticale dintre substantive, exprimate prin terminații — a supraviețuit parțial în română. Genitiv-dativul funcționează activ: mâna are genitivul mâinii, casa are genitivul casei. Spaniola, franceza, italiana nu au niciun caz morfologic la substantive. Română a conservat structuri pe care Occidentul le-a abandonat de secole.</p>
+
+      <p>Aceste trei trăsături — articolul enclitic, genul neutru și sistemul cazual parțial — nu formează laolaltă un profil de limbă latină izolată. Formează profilul unei limbi care aparține Sprachbund-ului balcanic, uniunii lingvistice în care limbi din familii diferite au converges structural de-a lungul mileniilor de coexistență pe același teritoriu. Substratul care a produs această convergență este pre-roman. Este geto-tracic. Este cel puțin la fel de vechi ca Herodot, probabil mult mai vechi.</p>
+
+      <div class="concluzie">Structura de adâncime a românei — sunetele ei unice, articolul enclitic, sistemul cazual, genul neutru în forma sa specifică — nu vine din Roma. Vine din spațiul carpato-balcanic, din fondul lingvistic pe care îl numim geto-dacic și care exista cu secole înainte ca prima legiune romană să treacă Dunărea.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-7','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 08</div>
+    <h2>Româna și sanscrita — un bunic comun cu 5000 de ani în urmă</h2>
+    <div id="text-8">
+      <p>Există similitudini între română și hindi sau sanscrită pe care mulți le observă și se întreabă ce înseamnă. Cuvântul pentru este: română este, sanscrită asti. Cuvântul pentru nou: română nou, sanscrită nava, hindi naya. Cuvântul pentru trei: română trei, sanscrită traya, hindi teen. Cuvântul pentru frate: română frate, sanscrită bhratar, hindi bhai. Cuvântul pentru dinte: română dinte, sanscrită danta, hindi dant.</p>
+
+      <p>Aceste similitudini nu sunt coincidențe și nu sunt dovezi că română vine din sanscrită sau invers. Sunt dovezi ale unui bunic comun — Proto-Indo-Europeana, limba vorbită în urmă cu 4500–6000 de ani de pe câmpiile nord-pontice, din care au derivat ramuri separate care s-au răspândit în direcții diferite: ramura italică spre vest, care a dat latina, ramura indo-iraniană spre est, care a dat sanscrita și persa, ramura tracică spre Balcani, care a dat dacica și traca.</p>
+
+      <p>Ceea ce face această observație interesantă pentru înțelegerea românei este că similitudinile cu sanscrita nu trec toate prin latină. Unele pot veni direct din substratul dacic, care aparținea aceleiași mari familii indo-europene ca sanscrita, pe ramura tracică. Româna are, prin urmare, două straturi de rudenie cu sanscrita: unul latin și unul dacic. Ambele vin din același bunic îndepărtat.</p>
+
+      <p>Asta este și conexiunea ascunsă pe care o menționai: dacii, romanii și indo-arienii care au ajuns în India aparțineau aceleiași mari migrații indo-europene. Se înrudeau nu pentru că s-au întâlnit, ci pentru că au plecat din același loc cu mii de ani în urmă. Când un vorbitor de română și un vorbitor de hindi se surprind că înțeleg câte un cuvânt din limba celuilalt, ei nu descoperă o influență reciprocă — descoperă memoria comună a unui popor care nu mai există, dar ale cărui cuvinte trăiesc în zeci de limbi de pe trei continente.</p>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-8','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 09</div>
+    <h2>De ce italiana e fragmentată și româna nu — substratul uniform ca răspuns</h2>
+    <div id="text-9">
+      <p>Un vorbitor nativ de venețiană și un vorbitor nativ de siciliană care conversează în dialectele lor respective au o inteligibilitate mutuală apropiată de zero. Nu se înțeleg. Vorbesc efectiv limbi diferite care au în comun originea latină și alfabetul. Un moldovean și un muntean, un ardelean și un oltean, un dobrogean și un bucovinean se înțeleg perfect, indiferent de diferențele de accent și vocabular regional. Aceasta nu este o coincidență — este rezultatul direct al structurii istorice a celor două spații.</p>
+
+      <p>Italia a avut substraturi diferite pe teritorii diferite. Sudul fusese colonizat de greci — Magna Graecia. Centrul fusese dominat de etrusci și osci. Nordul de celți și liguri. Latina a acoperit straturi complet diferite în fiecare regiune. Când influența latină s-a retras sau s-a fragmentat, au ieșit la suprafață diferențele subiacente. Pe deasupra, invaziile medievale au fragmentat suplimentar: longobarzii în nord au adus influențe germanice, arabii în Sicilia au lăsat urme lexicale și fonetice, normanzii în sud și în Sicilia au introdus influențe franceze normannice, bizantinii în est au adus influențe grecești. Fiecare regiune a fost modelată diferit.</p>
+
+      <p>Spațiul carpato-dunărean a avut un substrat relativ uniform — geto-dacic, înrudit cultural și lingvistic pe întreg teritoriul de la Carpați la Marea Neagră și de la Dunăre la Nistru. Valurile care au trecut prin acest spațiu — hunii, avarii, cumanii, tătarii — nu s-au instalat ca populații dominante cu strat lingvistic propriu. Au trecut. Slavii au venit și au rămas, lăsând un strat lexical important — cuvinte ca dragoste, a iubi, a înțelege — dar nu au rupt unitatea spațiului. Munții Carpați au funcționat ca un zid protector față de influențele diferențiatoare care au fragmentat alte spații romanice.</p>
+
+      <p>Rezultatul este o limbă unitară de la Cernăuți la Constanța, de la Timișoara la Chișinău — cu variante dialectale, dar cu inteligibilitate perfectă. O unitate care nu e o coincidență. E produsul unui substrat comun și al unei istorii comune de izolare relativă față de influențele care au fragmentat Occidentul roman.</p>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-9','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 10</div>
+    <h2>Mitul latinizării și construcția de prestigiu — o istorie politică a originilor</h2>
+    <div id="text-10">
+      <p>Narativul originii latine pure a românilor nu este o concluzie lingvistică. Este în mare parte o construcție politică, produsă într-un moment specific, cu un scop specific și bine documentat. Școala Ardeleană din sec. XVIII — Samuil Micu, Gheorghe Șincai, Petru Maior — a promovat cu ardoare teza originii latine pure tocmai pentru că românii din Transilvania aveau nevoie de argumente pentru a obține drepturi egale cu maghiarii și sașii în fața Curții de la Viena. A te declara descendent direct al romanilor — adică al fondatorilor civilizației europene — era cel mai puternic argument politic disponibil în acea epocă.</p>
+
+      <p>Această teză a fost utilă politic. A creat o conștiință națională. A justificat revendicări teritoriale. Dar a produs și un efect colateral: dacii au fost minimizați sau ignorați ca sursă a identității românești. Substratul dacic a fost prezentat ca neglijabil — câteva cuvinte de substrat, nimic esențial. Cel mult un ingredient minor într-o rețetă în rest latină.</p>
+
+      <p>Realitatea pe care o arată datele lingvistice este alta. Ș și Ț nu sunt latine. Ă și Î nu sunt latine. Articolul enclitic nu este latin. Aproximativ 150 de cuvinte fundamentale din vocabularul de bază al românei — brânză, vatră, mal, balaur, strugure, mânz, copil, mazăre, buză, ceafă, abur, groapă, doină — nu au etimologie latină clară. Aceste cuvinte nu sunt importuri tardive sau împrumuturi — sunt cuvinte pentru realitățile cotidiene cele mai elementare: hrană, corp, geografie, viață pastorală. Dacă dacii ar fi dispărut complet la cucerire și dacă limba lor ar fi murit brusc, aceste cuvinte nu ar fi supraviețuit două milenii. Faptul că au supraviețuit demonstrează că vorbitorii lor au continuat să existe și să contribuie la limbă secole întregi.</p>
+
+      <p>Nu există o contradicție între a recunoaște că româna are o structură gramaticală majoritar latină și a înțelege că fonologia, o parte importantă din vocabularul fundamental și structurile de adâncime vin dintr-un spațiu mai vechi decât Roma în acel loc geografic. Ambele sunt adevărate. Prima fără a doua este o jumătate de adevăr, iar o jumătate de adevăr poate fi mai înșelătoare decât o minciună directă.</p>
+
+      <div class="concluzie">Narativul „ne tragem din Roma" a fost o construcție de prestigiu cu un scop politic precis și legitim în epocă. Dar în 2026, când identitatea națională nu mai are nevoie de un argument medieval față de o Curte imperială, este posibil — și mai onest — să privim tabloul complet: o limbă a unui spațiu geografic specific, cu straturi de milenii, în care latina a adus scrierea și structura gramaticală dominantă, dar fondul era acolo de mult mai mult timp.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-10','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 11</div>
+    <h2>Ce a făcut URSS cu limba — anatomia celui mai eficient atac cultural posibil</h2>
+    <div id="text-11">
+      <p>Dacă vreți să înțelegeți cât de profund poate fi atacată o limbă fără s-o interzici niciodată, priviți ce s-a întâmplat în Basarabia în sec. XX. Romanii nu au încercat vreodată să schimbe limba dacilor prin forță. Uniunea Sovietică a reușit ceva mult mai subtil și mai eficient: a deconectat o populație de la propria limbă fără s-o interzică, separând sunetul de scriere.</p>
+
+      <p>Instrumentul principal a fost alfabetul. Scrierea românei cu caractere chirilice nu era o invenție sovietică — existase și în Evul Mediu. Dar reimposarea ei în 1940 în RSS Moldovenească a fost deliberat politică. Româna are sunete care nu se potrivesc în chirilic — trebuie forțate, distorsionate, transcrise aproximativ. Rezultatul concret: un moldovean educat în sistemul sovietic știa să citească și să scrie în chirilic, dar nu putea deschide o carte tipărită la București, pentru că era scrisă în latin. Zidul nu era fizic — era grafic.</p>
+
+      <p>Al doilea instrument a fost construcția artificială a unei limbi moldovenești distincte de română. Aceasta nu a fost o eroare academică — a fost o politică de stat implementată sistematic. Logica ei era transparentă: dacă moldovenii vorbesc o altă limbă, atunci Basarabia nu este un teritoriu românesc ocupat prin forță, ci un teritoriu sovietic legitim cu un popor propriu. Lingvistica în slujba geopoliticii. Niciun lingvist serios din lume nu a susținut vreodată că o limbă moldovenească distinctă de română există ca realitate lingvistică.</p>
+
+      <p>Efectul de lungă durată este vizibil azi în mii de cazuri individuale: oameni care vorbesc fluent, cu un vocabular bogat, cu o pronunție naturală — dar care nu știu să scrie în alfabet latin. Vorbirea se transmite oral, de la mamă la copil, fără să știi că înveți o limbă. Scrierea se transmite prin instituții, prin școli, prin cărți. Instituțiile au fost confiscate. Sunetul a rămas.</p>
+
+      <div class="atentie">Transnistria este singurul loc din Europa unde, în 2026, un copil crește cu alfabetul chirilic obligatoriu și cu convingerea că vorbește o limbă numită moldovenească. Este un experiment de inginerie identitară în desfășurare, susținut de prezența militară rusă. Nu e istorie — e prezent.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-11','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 12</div>
+    <h2>De ce n-a putut fi ucisă — forța limbii vorbite</h2>
+    <div id="text-12">
+      <p>Există o asimetrie fundamentală în orice atac asupra unei limbi: poți confisca scrisul, dar nu poți confisca sunetul. Poți schimba manualele, poți impune alt alfabet, poți declara că limba se numește altfel — dar nu poți opri o mamă să îi vorbească copilului ei în limba în care gândește. Și acolo, în transmiterea orală de la om la om, în gesturi și cuvinte și tonuri și diminutive și expresii care nu există în nicio altă limbă, supraviețuiește ceea ce nicio politică de stat nu a putut distruge.</p>
+
+      <p>Hunii, avarii, bulgarii, maghiarii, cumanii, tătarii, turcii, slavii, rușii — toți au trecut prin același spațiu geografic. Nimeni nu a reușit să înlocuiască cuvântul apă cu echivalentul lui slav sau turcesc sau unguresc. Cuvântul pâine a rămas. Cuvântul dor — care nu există în nicio altă limbă din lume și pentru care traducătorii din toate limbile se pierd în perifraze — a rămas. Aceasta este forța reală a limbii: nu instituțiile care o administrează, ci oamenii care o trăiesc zi de zi.</p>
+
+      <p>Recuperarea este în curs. Generația crescută după 1989 în Republica Moldova a învățat alfabetul latin la școală. Pe 16 martie 2023, Parlamentul de la Chișinău a votat că limba oficială a Republicii Moldova se numește română. Pe 11 martie 2024, Curtea Constituțională a confirmat. Ruptura dintre vorbire și scriere, creată în decenii de politică sovietică, se vindecă — lent, incomplet, dar se vindecă. Ucraina a recunoscut oficial limba română ca limbă protejată și a renunțat la termenul moldovenesc în legislație.</p>
+
+      <div class="nota">Pe 31 august 2026, Ziua Limbii Române se sărbătorește în România, în Republica Moldova și, pentru prima dată, și în Ucraina — după ce președintele Zelenski a semnat decretul în cadrul vizitei la București din martie 2026. Direcția s-a clarificat. Vindecarea ia timp, dar a început.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-12','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 13</div>
+    <h2>Rănile care nu s-au vindecat — Transnistria, Timocul, dialectele care dispar</h2>
+    <div id="text-13">
+      <p>Transnistria este o fâșie de pământ în estul Republicii Moldova, separată de restul țării printr-un conflict înghețat din 1992. Acolo staționează trupe ruse. Acolo un copil crește cu convingerea că vorbește o limbă numită moldovenească, scrisă în chirilic. Transnistria nu este un conflict teritorial — este un laborator de inginerie identitară în desfășurare, un punct de continuitate directă cu politica lingvistică sovietică, menținut artificial de o prezență militară străină.</p>
+
+      <p>Timocul sârbesc este mai puțin cunoscut și mai discret dispărut. Estimările vorbesc de 200.000 până la 250.000 de etnici români sau vlahi în Serbia de est — un popor care vorbește o formă arhaică și frumoasă de română, pe un pământ pe care l-a locuit de secole. Nu au școli în limbă română. Nu au biserici cu slujbă în română. Nu au recunoaștere oficială. Sunt un popor fără hârtii, care supraviețuiește prin transmitere orală, exact cum a supraviețuit limba în Dacia romană.</p>
+
+      <p>Istroromâna, vorbită de câteva mii de oameni în peninsula Istria din Croația, este în extinție. Meglenoromâna, din câteva sate din nordul Greciei, este în extinție. Aromâna, vorbită de comunități din Grecia, Macedonia, Albania și Bulgaria, rezistă mai bine, dar și ea pierde vorbitori cu fiecare generație. Aceste dialecte sunt ramuri ale aceluiași trunchi — latina vulgară a spațiului carpato-balcanic — care au evoluat în izolare secole întregi. Dispariția lor este pierderea unor voci unice ale aceluiași spațiu lingvistic.</p>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-13','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 14</div>
+    <h2>Un popor împrăștiat — românii în lume</h2>
+    <div id="text-14">
+      <p>Aproximativ 9,7 milioane de români trăiesc în afara granițelor României. Populația rezidentă a României este de circa 19 milioane. Aproape jumătate din câți sunt în țară trăiesc în afara ei. Nu există un alt stat din Uniunea Europeană cu o diasporă atât de mare raportată la populația rămasă acasă. Italia găzduiește peste un milion de cetățeni români rezidenți oficial. Spania — aproximativ 600.000. SUA — peste 450.000.</p>
+
+      <p>Adăugând vorbitorii din Republica Moldova, comunitățile istorice din Ucraina, Serbia, Bulgaria, Ungaria, și dialectele din Balcani, tabloul complet al vorbitorilor de română și de variante ale românei depășește 28 de milioane de oameni. E a cincea limbă romanică din lume după număr de vorbitori, după spaniolă, portugheză, franceză și italiană.</p>
+
+      <p>O parte din această diasporă masivă este produsul sărăciei și al migrației economice — o consecință directă a deceniilor de comunism care au izolat România de Occident tocmai în perioada în care Occidentul se construia. O parte este produsul istoriei — comunități românești care au existat în locurile lor de sute de ani, înainte ca granițele moderne să fie trasate în jurul sau dincolo de ele. Ambele dimensiuni sunt reale și niciuna nu poate fi ignorată în înțelegerea tabloului complet.</p>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-14','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <div class="capitol">
+    <div class="capitol-nr">Capitol 15</div>
+    <h2>Ce știm, ce nu știm și de ce contează să le separăm</h2>
+    <div id="text-15">
+      <p>Această conversație a urmărit dovezile acolo unde duc și a recunoscut deschis unde se opresc. Există concluzii clare și există zone de incertitudine reală. A le amesteca ar fi o minciună intelectuală.</p>
+
+      <p>Ce se poate spune cu certitudine: poporul care a generat limba română — geții și dacii — exista documentat cu cel puțin 600 de ani înainte de cucerirea romană. Cucerirea a durat 165 de ani și a acoperit parțial teritoriul dacic. Legiunile romane nu vorbeau latină maternă — erau trupe cosmopolite care foloseau latina ca limbă de comandă. Dacica aparținea aceluiași grup centum ca latina — erau limbi înrudite, nu opuse. Patru sunete fundamentale ale românei — ă, î, ș, ț — nu există în latina clasică și vin din substratul carpato-balcanic. Aproximativ 150 de cuvinte fundamentale ale românei nu au etimologie latină. Articolul enclitic și alte structuri de adâncime ale românei nu vin din latină, ci din Sprachbund-ul balcanic cu substrat pre-roman. Ovidiu a reușit să compună poezie în getică în câțiva ani, ceea ce sugerează că cele două limbi nu erau complet opace una față de cealaltă.</p>
+
+      <p>Ce nu se poate știi cu certitudine: nu avem texte dacice extinse — avem câteva sute de nume de plante și aproximativ o mie de antroponime și toponime. Orice afirmație despre gradul exact de inteligibilitate mutuală dintre dacică și latina vulgară este speculație, nu concluzie. Nu știm dacă romanizarea a fost un proces de amestec gradual sau unul de convergență paralelă. Nu știm proporția exactă a contribuției dacice la română. Nu știm cu certitudine nici continuitatea nord-dunăreană — există argumente pentru ambele teorii.</p>
+
+      <p>Cel mai important lucru de ținut minte: limba și oamenii care o vorbesc sunt două realități diferite și trebuie înțelese separat. O limbă poate supraviețui dispariției poporului care a creat-o. Un popor poate supraviețui pierderii limbii sale. În cazul geto-dacilor, niciuna din extreme nu e corectă. Dacii nu au dispărut la cucerire. Limba dacică nu a dispărut brusc. Ceea ce s-a produs în câteva secole — nu în 165 de ani, ci în secole — a fost o convergență treptată în care latina vulgară de contact a câștigat statutul de limbă publică, scrierea și prestigiul, în timp ce fondul geto-dacic și-a lăsat amprenta ireversibilă în sunete, în structuri și în sute de cuvinte pentru cele mai cotidiene realități ale vieții.</p>
+
+      <div class="citat">Această conversație nu a rezolvat misterul originilor limbii române. A pus întrebările corect. Și asta este mai important decât orice răspuns simplu. Un răspuns simplu la o întrebare complexă este întotdeauna o minciună bine intenționată. O întrebare bine pusă este începutul înțelegerii reale. Limba română este, în cel mai profund sens al cuvântului, limba unui spațiu — nu a unui cuceritor.</div>
+    </div>
+    <div class="audio-bar">
+      <button class="btn-asculta" onclick="vorbeste('text-15','ro-RO')">🔊 Ascultă</button>
+      <button class="btn-stop" onclick="opreste()">⏹ Stop</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function vorbeste(id, limba) {
+    if (!window.speechSynthesis) {
+      alert('Browserul tău nu suportă redarea audio.');
+      return;
+    }
+    speechSynthesis.cancel();
+    var text = document.getElementById(id).innerText;
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = limba;
+    u.rate = 0.88;
+    u.pitch = 1.0;
+    speechSynthesis.speak(u);
+  }
+  function opreste() {
+    if (window.speechSynthesis) speechSynthesis.cancel();
+  }
+</script>
+</body>
+</html>
