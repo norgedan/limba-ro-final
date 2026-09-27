@@ -1,4 +1,4 @@
-# Limba care nu vrea să moară · Språket som ikke vil dø
+# Limba care nu vrea să moară · Språket som nekter å dø
 
 **Live:** https://norgedan.github.io/limba-ro-final/
 
